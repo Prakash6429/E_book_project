@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import NoteState from './context/notes/NoteState';
+import { Alert } from './components/Alert';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <NoteState>
         <Router>
         <Navbar/>
+        <Alert message="This is amazing React Course"/>
         <div className="container">
           <Routes>
               {/* <Route path="/"><Home/></Route>  Never Use This */}
