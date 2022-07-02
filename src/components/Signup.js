@@ -8,7 +8,7 @@ const Signup = (props) => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     const {name, email ,password} = credentials;
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+    const response = await fetch("http://localhost:5000/api/auth/createuser", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -33,7 +33,8 @@ const onChange = (e)=>{
   }
 
   return (
-    <div className='container'>
+    <div className='container mt-2'>
+      <h2>Create an account to use iNotebook</h2>
         <form onSubmit={handleSubmit}>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
