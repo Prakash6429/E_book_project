@@ -13,9 +13,9 @@ const Navbar=()=> {
     }
     
 return (
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar navbar-expand-lg navbar-secondary bg-secondary">
     <div className="container-fluid">
-        <Link className="navbar-brand" to="/">iNotebook</Link>
+        <Link className="navbar-brand" to="/">E-Book</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +31,7 @@ return (
                     {!localStorage.getItem('token')?<form className="d-flex" role="search">
                             <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
                             <Link className="btn btn-primary mx-1" to="/signup" role="button">SignUp</Link>
-                    </form>: <button onClick={handleLogout} className='btn btn-primary'>Log Out</button> }
+                    </form>: <button onClick={handleLogout} className='btn btn-danger'>Log Out</button> }
         </div>
     </div>
 </nav>

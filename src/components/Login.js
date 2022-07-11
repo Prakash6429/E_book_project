@@ -32,8 +32,8 @@ const Login = (props) => {
       }
 
   return (
-    <div className='mt-3'>
-      <h2>Login to continue to iNotebook</h2>
+    <div className='login container mt-3'>
+      <h2>Login to access your notes</h2>
         <form  onSubmit={handleSubmit}>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email address</label>
@@ -44,7 +44,7 @@ const Login = (props) => {
                 <label htmlFor="password" className="form-label">Password</label>
                 <input type="password" className="form-control" value={credentials.password} onChange={onChange} id="password" name='password'/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-dark">Submit</button>
         </form>
     </div>
   )

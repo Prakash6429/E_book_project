@@ -49,14 +49,14 @@ function Notes(props) {
 
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog">
-        <div className="modal-content">
+        <div className="notec modal-content">
           <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="modal-body">
             
-          <form className='my-3'>
+          <form className=' my-3'>
               <div className="mb-3">
                   <label htmlFor="title" className="form-label">Title</label>
                   <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={5} required/>
@@ -73,8 +73,8 @@ function Notes(props) {
 
           </div>
           <div className="modal-footer">
+            <button type="button" disabled={note.etitle.length<5 || note.edescription.length<5} onClick={handleClick} className="btn btn-danger">Update</button>
             <button type="button" ref={refClose} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" disabled={note.etitle.length<5 || note.edescription.length<5} onClick={handleClick} className="btn btn-primary">Update Note</button>
           </div>
         </div>
       </div>
